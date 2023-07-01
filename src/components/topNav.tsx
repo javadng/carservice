@@ -10,7 +10,7 @@ import { HiLocationMarker } from "react-icons/hi";
 
 const TopNav = () => {
   return (
-    <div className="flex justify-between text-primary p-2 items-center bg-light-gray">
+    <div className="hidden md:flex justify-between text-primary p-2 items-center bg-light-gray">
       <div className="address flex items-center">
         <HiLocationMarker />
         <span className="text-secondary text-xs">
