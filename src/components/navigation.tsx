@@ -48,33 +48,33 @@ const Navigation = () => {
               : "opacity-0 unvisible h-0"
           } md:flex justify-evenly transition duration-300 md:opacity-100 md:visible md:h-auto md:static md:bottom-0 md:shadow-none`}
         >
-          <li
-            className={`${liClasses} ${
-              isActiveLink("/") ? "text-primary" : ""
-            }`}
-          >
-            <Link href="/">
+          <Link href="/">
+            <li
+              className={`${liClasses} ${
+                isActiveLink("/") ? "text-primary" : ""
+              }`}
+            >
               <span>Home</span>
-            </Link>
-          </li>
-          <li
-            className={`${liClasses} ${
-              isActiveLink("/about") ? "text-primary" : ""
-            }`}
-          >
-            <Link href="/about">
+            </li>
+          </Link>
+          <Link href="/about">
+            <li
+              className={`${liClasses} ${
+                isActiveLink("/about") ? "text-primary" : ""
+              }`}
+            >
               <span>About</span>
-            </Link>
-          </li>
-          <li
-            className={`${liClasses} ${
-              isActiveLink("/services") ? "text-primary" : ""
-            }`}
-          >
-            <Link href="/services">
+            </li>
+          </Link>
+          <Link href="/services">
+            <li
+              className={`${liClasses} ${
+                isActiveLink("/services") ? "text-primary" : ""
+              }`}
+            >
               <span>Services</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
           <li
             className={`${liClasses} ${
               isActiveLink("/pages") ? "text-primary" : ""
@@ -82,15 +82,15 @@ const Navigation = () => {
           >
             <span>Pages</span>
           </li>
-          <li
-            className={`${liClasses} ${
-              isActiveLink("/contact") ? "text-primary" : ""
-            }`}
-          >
-            <Link href="/contact">
+          <Link href="/contact">
+            <li
+              className={`${liClasses} ${
+                isActiveLink("/contact") ? "text-primary" : ""
+              }`}
+            >
               <span>Contact</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="bg-primary text-white h-full p-5 py-7 hidden md:block">
