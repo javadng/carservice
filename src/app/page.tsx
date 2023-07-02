@@ -1,4 +1,6 @@
+import ServiceItem from "@/components/serviceItem";
 import Slider from "@/components/slider";
+import { FaTools, FaUsersCog, FaCertificate } from "react-icons/fa";
 
 const images = [
   {
@@ -17,10 +19,41 @@ const images = [
   },
 ];
 
+const serviceItems = [
+  {
+    id: "s1",
+    title: "Quality Servicing",
+    desc: "Diam dolor diam ipsum sit amet diam et eos erat ipsum",
+    icon: <FaTools />,
+  },
+  {
+    id: "s2",
+    title: "Expert Workers",
+    desc: "Diam dolor diam ipsum sit amet diam et eos erat ipsum",
+    icon: <FaUsersCog />,
+  },
+  {
+    id: "s3",
+    title: "Modern Equipment",
+    desc: "Diam dolor diam ipsum sit amet diam et eos erat ipsum",
+    icon: <FaCertificate />,
+  },
+];
+
 export default function Home() {
   return (
-    <section>
+    <div className="home">
       <Slider images={images} />
-    </section>
+      <section className="my-5 w-[80%] mx-auto grid grid-cols-[repeat(auto-fit,minmax(17rem,_1fr))] gap-5">
+        {serviceItems.map((el) => (
+          <ServiceItem
+            title={el.title}
+            desc={el.desc}
+            icon={el.icon}
+            key={el.id}
+          />
+        ))}
+      </section>
+    </div>
   );
 }

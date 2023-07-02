@@ -59,11 +59,9 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
         initial="hidden"
         animate="visible"
       >
-        <figure className="relative ">
+        <figure className="relative h-[18rem] md:h-[33rem] w-full">
           <Image
-            width={1000}
-            height={1000}
-            className="w-full"
+            fill={true}
             quality={100}
             src={images[currentImageIndex].url}
             alt={`Image ${currentImageIndex}`}
@@ -76,13 +74,13 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
           transition={{ duration: 0.5 }}
           className="text-white absolute top-[10%] w-[80%] left-[10%] text-center"
         >
-          <h4 className="my-5 uppercase">
+          <h4 className="my-5 uppercase text-xs">
             {images[currentImageIndex].subtitle}
           </h4>
-          <h1 className="text-5xl mb-14 w-2/3 whitespace-normal mx-auto font-bold">
+          <h1 className="text-lg truncate md:text-5xl mb-6 md:mb-14 w-2/3 whitespace-normal mx-auto font-bold">
             {images[currentImageIndex].title}
           </h1>
-          <button className="bg-primary py-3 px-14 rounded-lg text-xl uppercase">
+          <button className="bg-primary p-3 py-1 md:py-3 md:px-14 rounded-lg md:text-xl uppercase">
             {images[currentImageIndex].btnText}
           </button>
         </motion.div>
