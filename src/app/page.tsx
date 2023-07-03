@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Fact from "@/components/fact";
+import OurService from "@/components/ourService";
 import ServicesList from "@/components/servicesList";
 import Slider from "@/components/slider";
 
@@ -24,11 +25,10 @@ export default function Home() {
   return (
     <div className="home">
       <Slider images={images} />
-      <div className="container mx-auto w-5/6">
-        <ServicesList />
-        <About />
-      </div>
+      <ServicesList />
+      <About />
       <Fact />
+      <OurService />
     </div>
   );
 }

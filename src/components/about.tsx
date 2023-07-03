@@ -1,10 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import ReadMoreBtn from "./readmoreBtn";
+import { motion, Variants, Transition } from "framer-motion";
+import ScrollPullAnimated from "./scrollPullAnimated";
+
+const cardVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      bounce: 0.4,
+      duration: 0.8,
+    } as Transition,
+  },
+};
 
 const About = () => {
   return (
-    <section className="about grid md:grid-cols-2 gap-10 mt-32">
-      <div className="image">
+    <section className="about container mx-auto w-5/6 grid md:grid-cols-2 gap-10 mt-32">
+      <ScrollPullAnimated offscreenY={0} onscreenY={0} viewportAmount={0.2}>
         <figure className="relative h-[30rem] md:h-[34rem]">
           <div className="sticky-title absolute -right-5 -top-5 bg-black bg-opacity-10 z-40 p-8 text-white text-3xl w-64">
             <span className="capitalize">
@@ -13,7 +31,7 @@ const About = () => {
           </div>
           <Image src="/image/about.jpg" fill={true} alt="about-image" />
         </figure>
-      </div>
+      </ScrollPullAnimated>
       <div className="desc">
         <h3 className="uppercase text-primary font-bold my-3">about us</h3>
         <h1 className="capitalize text-4xl text-secondary mb-6 font-bold">

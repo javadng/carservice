@@ -30,3 +30,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.services-items:hover > * {
+  color: White;
+}

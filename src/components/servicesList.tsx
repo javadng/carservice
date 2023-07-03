@@ -24,7 +24,7 @@ const serviceItems = [
 
 const ServicesList = () => {
   return (
-    <section className="my-5 mb-16 grid grid-cols-[repeat(auto-fit,minmax(20rem,_1fr))] gap-5">
+    <section className="container mx-auto w-5/6 my-5 mb-16 grid grid-cols-[repeat(auto-fit,minmax(20rem,_1fr))] gap-5">
       {serviceItems.map((el) => (
         <ServiceItem
           title={el.title}

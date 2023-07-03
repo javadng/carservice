@@ -21,7 +21,7 @@ const Navigation = () => {
   const menuVisibilityHanlder = () => setMenuShown((prevState) => !prevState);
 
   return (
-    <nav className="grid z-50 relative grid-cols-[minmax(140px,190px)_1fr] md:grid-cols-[minmax(180px,260px)_1fr_180px] h-20 shadow-md items-center">
+    <nav className="grid  bg-white z-50 sticky top-0 grid-cols-[minmax(140px,190px)_1fr] md:grid-cols-[minmax(180px,260px)_1fr_180px] h-20 shadow-md items-center">
       <div className="icon text-primary text-2xl font-bold p-3">
         <h2 className="flex items-center">
           <AiFillCar />

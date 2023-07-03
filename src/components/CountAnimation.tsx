@@ -30,7 +30,16 @@ const CountAnimation: React.FC<MyComponentProps> = ({ targetNumber }) => {
     };
   }, [targetNumber]);
 
-  return <span>{count}</span>;
+  return (
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      variants={countVariants}
+      transition={{ duration: 1 }}
+    >
+      {count}
+    </motion.span>
+  );
 };
 
 export default CountAnimation;
