@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import BookForService from "@/components/bookForService";
 import Fact from "@/components/fact";
 import OurService from "@/components/ourService";
 import ServicesList from "@/components/servicesList";
@@ -29,6 +30,7 @@ export default function Home() {
       <About />
       <Fact />
       <OurService />
+      <BookForService />
     </div>
   );
 }

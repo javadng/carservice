@@ -19,6 +19,12 @@
 body {
 }
 
+input,
+input:focus {
+  border: none;
+  outline: none;
+}
+
 .unvisible {
   visibility: hidden;
 }
@@ -33,4 +39,16 @@ body {
 
 .services-items:hover > * {
   color: White;
+}
+
+.services-items.isActive > * {
+  color: White;
+}
+
+.book-service {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../public/image/carousel-bg-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -17,11 +17,12 @@ module.exports = {
         primary: "#D81324",
         "primary-hover": "#b90a19",
         secondary: "#091c47",
+        "secondary-hover": "#05112d",
         white: "#FFFFFF",
         gray: "#e1e0e0",
         "light-gray": "#f1f1f1",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

@@ -5,22 +5,11 @@ import { ourServicesItems, ourServiceListText } from "@/lib/helperObj";
 import { useState } from "react";
 import ScrollPullAnimated from "./scrollPullAnimated";
 
-const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
-  },
-  onscreen: {
-    y: 50,
-    transition: {
-      type: "tween",
-      bounce: 0.4,
-      duration: 0.8,
-    } as Transition,
-  },
-};
-
 const OurService = () => {
   const [currentItem, setCurrentItem] = useState(0);
+
+  const isActiveIndex = (indexItem: number) =>
+    currentItem === indexItem ? "bg-primary isActive" : "";
 
   const selecActiveListhandler = (e: any) => {
     const liElem = e.target.closest(".services-items");
@@ -42,7 +31,9 @@ const OurService = () => {
               key={el.id}
               data-listnum={index}
               onClick={selecActiveListhandler}
-              className="services-items my-3 flex items-center cursor-pointer text-2xl bg-light-gray p-3 font-bold hover:bg-primary transition duration-200"
+              className={`${isActiveIndex(
+                index
+              )} services-items my-3 flex items-center cursor-pointer text-2xl bg-light-gray p-3 font-bold hover:bg-primary transition duration-200`}
             >
               {el.icon}
               <span>{el.text}</span>
