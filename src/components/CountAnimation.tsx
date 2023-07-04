@@ -23,7 +23,7 @@ const CountAnimation: React.FC<MyComponentProps> = ({ targetNumber }) => {
         }
         return newCount;
       });
-    }, 0.5);
+    }, 0.001);
 
     return () => {
       clearInterval(interval);

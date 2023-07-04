@@ -6,6 +6,8 @@ interface Props {
   offscreenY: number;
   onscreenY: number;
   viewportAmount?: number;
+  scale?: boolean;
+  duration?: number;
 }
 
 const ScrollPullAnimated: React.FC<Props> = ({
@@ -14,6 +16,8 @@ const ScrollPullAnimated: React.FC<Props> = ({
   offscreenY,
   onscreenY,
   viewportAmount,
+  scale,
+  duration,
 }) => {
   const cardVariants: Variants = {
     offscreen: { y: offscreenY, opacity: 0 },
@@ -23,10 +27,25 @@ const ScrollPullAnimated: React.FC<Props> = ({
       transition: {
         type: "tween",
         bounce: 0.4,
-        duration: 0.8,
+        duration: duration || 0.8,
       } as Transition,
     },
   };
+
+  const cardVariantsScale: Variants = {
+    offscreen: { opacity: 0, scale: 0.5 },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "tween",
+        bounce: 0.4,
+        duration: duration || 0.8,
+      } as Transition,
+    },
+  };
+
+  const variant = scale ? cardVariantsScale : cardVariants;
 
   return (
     <motion.div
@@ -34,7 +53,7 @@ const ScrollPullAnimated: React.FC<Props> = ({
       whileInView="onscreen"
       viewport={{ once: true, amount: viewportAmount || 0.8 }}
     >
-      <motion.div className={className} variants={cardVariants}>
+      <motion.div className={className} variants={variant}>
         {children}
       </motion.div>
     </motion.div>

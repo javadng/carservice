@@ -8,7 +8,7 @@ const BookForm = () => {
     // request handler here ...
   };
   return (
-    <form onSubmit={submitHandler} className="bg-primary px-8 py-4">
+    <form onSubmit={submitHandler} className="bg-primary px-6 py-4 text-sm md:text-xl">
       <h1 className="md:text-4xl font-bold text-2xl my-8 text-center">
         Book For A Service
       </h1>
@@ -18,11 +18,10 @@ const BookForm = () => {
       </div>
       <div className="form-row grid grid-cols-2 gap-5 my-3 text-secondary">
         <div className="input-container">
-          {/* <label htmlFor="service">Your Name</label> */}
           <select
             id="service"
             defaultValue={0}
-            className="rounded-lg block w-full p-4"
+            className="rounded-lg block w-full md:p-4"
           >
             <option value={0} disabled>
               Select A Service
@@ -37,7 +36,7 @@ const BookForm = () => {
             type="date"
             name=""
             id=""
-            className="rounded-lg block w-full p-4"
+            className="rounded-lg block w-full md:p-4"
           />
         </div>
       </div>

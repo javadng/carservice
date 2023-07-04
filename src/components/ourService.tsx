@@ -25,26 +25,28 @@ const OurService = () => {
         </header>
       </ScrollPullAnimated>
       <div className="grid lg:grid-cols-[20rem,_1fr] gap-6">
-        <ul className="select-list">
-          {ourServiceListText.map((el, index) => (
-            <li
-              key={el.id}
-              data-listnum={index}
-              onClick={selecActiveListhandler}
-              className={`${isActiveIndex(
-                index
-              )} services-items my-3 flex items-center cursor-pointer text-2xl bg-light-gray p-3 font-bold hover:bg-primary transition duration-200`}
-            >
-              {el.icon}
-              <span>{el.text}</span>
-            </li>
-          ))}
-        </ul>
+        <ScrollPullAnimated offscreenY={300} onscreenY={0}>
+          <ul className="select-list">
+            {ourServiceListText.map((el, index) => (
+              <li
+                key={el.id}
+                data-listnum={index}
+                onClick={selecActiveListhandler}
+                className={`${isActiveIndex(
+                  index
+                )} services-items my-3 flex items-center cursor-pointer md:text-2xl bg-light-gray p-3 font-bold hover:bg-primary transition duration-200`}
+              >
+                {el.icon}
+                <span>{el.text}</span>
+              </li>
+            ))}
+          </ul>
+        </ScrollPullAnimated>
         <AnimatePresence>
           <motion.div
             key={currentItem}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 300 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <OurServiceItem

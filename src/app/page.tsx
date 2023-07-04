@@ -2,6 +2,7 @@ import About from "@/components/about";
 import BookForService from "@/components/bookForService";
 import Fact from "@/components/fact";
 import OurService from "@/components/ourService";
+import OurTechnicians from "@/components/ourTechs";
 import ServicesList from "@/components/servicesList";
 import Slider from "@/components/slider";
 
@@ -31,6 +32,7 @@ export default function Home() {
       <Fact />
       <OurService />
       <BookForService />
+      <OurTechnicians />
     </div>
   );
 }

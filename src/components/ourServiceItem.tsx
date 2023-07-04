@@ -26,7 +26,7 @@ const OurServiceItem: React.FC<Props> = ({
         <ul className="my-3">
           {listTitles.map((text, index) => (
             <li key={index} className="flex items-center my-3">
-              <AiOutlineCheck className="text-green-700 mr-6 text-2xl" />
+              <AiOutlineCheck className="text-green-700 mr-6 md:text-2xl" />
               <span>{text}</span>
             </li>
           ))}
