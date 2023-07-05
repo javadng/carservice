@@ -77,3 +77,9 @@ input:focus {
 /* .react-multi-carousel-dot-list li button {
   background-color: red;
 } */
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../../public/image/carousel-bg-1.jpg") center center no-repeat;
+  background-size: cover;
+}
