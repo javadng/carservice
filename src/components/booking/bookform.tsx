@@ -8,7 +8,10 @@ const BookForm = () => {
     // request handler here ...
   };
   return (
-    <form onSubmit={submitHandler} className="bg-primary px-6 py-4 text-sm md:text-xl">
+    <form
+      onSubmit={submitHandler}
+      className="bg-primary px-6 py-4 text-sm md:text-xl"
+    >
       <h1 className="md:text-4xl font-bold text-2xl my-8 text-center">
         Book For A Service
       </h1>

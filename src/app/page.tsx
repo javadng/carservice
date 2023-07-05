@@ -5,6 +5,7 @@ import OurService from "@/components/ourService";
 import OurTechnicians from "@/components/ourTechs";
 import ServicesList from "@/components/servicesList";
 import Slider from "@/components/slider";
+import TestMonial from "@/components/testMonial";
 
 const images = [
   {
@@ -33,6 +34,7 @@ export default function Home() {
       <OurService />
       <BookForService />
       <OurTechnicians />
+      <TestMonial />
     </div>
   );
 }
