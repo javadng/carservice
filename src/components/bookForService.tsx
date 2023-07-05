@@ -4,7 +4,7 @@ import ScrollPullAnimated from "./scrollPullAnimated";
 
 const BookForService = () => {
   return (
-    <section className="book-service my-12 text-white px-10">
+    <section className="book-service my-12 text-white">
       <div className="gap-10 grid md:grid-cols-2 container w-5/6 mx-auto">
         <ScrollPullAnimated offscreenY={300} onscreenY={0}>
           <div className="desc p-8">

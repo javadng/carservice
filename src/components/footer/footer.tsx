@@ -5,8 +5,8 @@ import { AiOutlineRight } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 text-white  ">
-      <div className="container w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="footer p-10 text-white">
+      <div className="container w-5/6 mx-auto md:grid md:grid-cols-2 lg:grid-cols-4">
         {/* addresses */}
         <ul>
           <h1 className="text-2xl font-bold my-6">Address</h1>
@@ -36,7 +36,7 @@ const Footer = () => {
           </li>
         </ul>
         {/* services */}
-        <ul>
+        <ul className="md:row-start-2 lg:row-start-1 lg:col-start-3">
           <h1 className="text-2xl my-6 font-bold">Services</h1>
           <li className="flex items-center my-1 p-1 hover:scale-110 transition duration-300 cursor-pointer">
             <AiOutlineRight className="mr-3" />
@@ -60,7 +60,7 @@ const Footer = () => {
           </li>
         </ul>
         {/* newsletter */}
-        <div>
+        <div className="md:row-start-2 lg:row-start-1 lg:col-start-4">
           <h1 className="text-2xl my-6 font-bold">Newsletter</h1>
           <p className="my-3">
             Dolor amet sit justo amet elitr clita ipsum elitr est.
