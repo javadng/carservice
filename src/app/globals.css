@@ -79,12 +79,14 @@ input:focus {
   transform: scale(0);
 }
 
-/* .react-multi-carousel-dot-list li button {
-  background-color: red;
-} */
-
 .footer {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url("../../public/image/carousel-bg-1.jpg") center center no-repeat;
   background-size: cover;
+}
+
+.page-menu:hover .submenu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }

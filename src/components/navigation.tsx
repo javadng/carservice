@@ -8,6 +8,7 @@ import {
   AiOutlineArrowRight,
   AiOutlineMenu,
   AiOutlineClose,
+  AiOutlineDown,
 } from "react-icons/ai";
 
 const Navigation = () => {
@@ -78,9 +79,21 @@ const Navigation = () => {
           <li
             className={`${liClasses} ${
               isActiveLink("/pages") ? "text-primary" : ""
-            } cursor-pointer`}
+            } cursor-pointer flex items-center page-menu relative`}
           >
             <span>Pages</span>
+            <AiOutlineDown className="ml-1 font-bold text-xl" />
+            <ul className="submenu py-6 bg-white opacity-0 unvisible transition duration-300 translate-y-10 absolute top-5 left-0 text-secondary shadow-md">
+              <li className="hover:bg-light-gray hover:text-primary transition py-2 px-6">
+                <Link href="/booking">Booking</Link>
+              </li>
+              <li className="hover:bg-light-gray hover:text-primary transition py-2 px-6">
+                <Link href="/technicians">Technicians</Link>
+              </li>
+              <li className="hover:bg-light-gray hover:text-primary transition py-2 px-6">
+                <Link href="/testimonial">Testimonial</Link>
+              </li>
+            </ul>
           </li>
           <Link href="/contact">
             <li

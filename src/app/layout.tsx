@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import TopNav from "@/components/topNav";
-import StickyNav from "@/components/stickyNav";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer/footer";
 
