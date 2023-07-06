@@ -8,7 +8,7 @@ import Footer from "@/components/footer/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Car Service",
+  title: "CarServ",
   description: "Best service you can get!",
 };
 
@@ -19,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head />
       <body className={inter.className}>
         <TopNav />
         <Navigation />
