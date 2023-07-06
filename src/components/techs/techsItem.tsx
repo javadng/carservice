@@ -21,7 +21,7 @@ const TechItem: React.FC<Props> = ({
       <div className="tech-item cursor-pointer bg-light-gray pb-3 shadow-sm">
         <figure className="relative h-[20rem] md:h-[16rem] tech-figure after:bg-primary">
           <Image src={imgSrc} alt={fullname} fill={true} />
-          <div className="tech-social text-2xl absolute transition z-20 top-1/2 left-[160px] md:left-[50px] flex items-center justify-between">
+          <div className="tech-social text-2xl absolute transition z-20 top-1/2 left-0 right-0 flex items-center justify-evenly w-1/2 mx-auto">
             <span className="text-primary p-2 mx-2 transition duration-200 hover:text-white bg-white hover:bg-secondary z-20 inline-block rounded-lg">
               <BsLinkedin />
             </span>
